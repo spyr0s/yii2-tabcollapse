@@ -15,21 +15,12 @@ class TabCollapse extends Tabs{
         $this->registerClientScipt();
     }
 
-    public function registerClientScipt(){
-        $view = $this->getView();
-        TabCollapseAsset::register($view);
-
-        $id = $this->options['id'];
-        $options = Json::encode($this->clientOptions);
-        $js = '$("#'.$id.'").tabCollapse('.$options.')';
-        $view->registerJs($js);
-        
-        if (!empty($this->tabCollapseEvents)) {
-            $js = [];
-            foreach ($this->tabCollapseEvents as $event => $function) {
-                $js[] = '$("#'.$id.'").on("'.$event.'", '.$function.');';
-            }
-            $view->registerJs(implode("\n", $js));
-        }
+    public function behaviors()
+    {
+        return [
+            'collapse' => [
+                'class' => 'spyr0s\tabcollapse\CollapseBehavior'
+            ]
+        ];
     }
 }
