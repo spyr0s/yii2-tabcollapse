@@ -8,6 +8,7 @@ use yii\helpers\Json;
 class TabCollapse extends Tabs{
 
     public $tabCollapseOptions = [];
+    public $tabCollapseEvents = [];
 
     public function run(){
         parent::run();
@@ -22,5 +23,13 @@ class TabCollapse extends Tabs{
         $options = Json::encode($this->clientOptions);
         $js = '$("#'.$id.'").tabCollapse('.$options.')';
         $view->registerJs($js);
+        
+        if (!empty($this->tabCollapseEvents)) {
+            $js = [];
+            foreach ($this->tabCollapseEvents as $event => $function) {
+                $js[] = '$("#'.$id.'").on("'.$event.'", '.$function.');';
+            }
+            $view->registerJs(implode("\n", $js));
+        }
     }
 }
