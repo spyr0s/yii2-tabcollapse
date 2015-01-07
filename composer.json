@@ -1,8 +1,6 @@
 {
-    // package name
     "name": "spyr0s/yii2-tabcollapse",
 
-    // package type
     "type": "yii2-extension",
 
     "description": "Tab collapse extension for the yii2 framework",
@@ -21,12 +19,10 @@
         }
     ],
 
-    // package dependencies
     "require": {
         "yiisoft/yii2": "*",
     },
 
-    // class autoloading specs
     "autoload": {
         "psr-4": {
             "spyr0s\\tabcollapse\\": ""
