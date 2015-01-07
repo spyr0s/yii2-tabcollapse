@@ -1,8 +1,6 @@
 {
     "name": "spyr0s/yii2-tabcollapse",
-
     "type": "yii2-extension",
-
     "description": "Tab collapse extension for the yii2 framework",
     "keywords": ["yii2", "tabcollapse", "extension", "bootstrap"],
     "license": "MIT",
@@ -18,11 +16,9 @@
             "email": "lordovol@gmail.com"
         }
     ],
-
     "require": {
-        "yiisoft/yii2": "*",
+        "yiisoft/yii2": "*"
     },
-
     "autoload": {
         "psr-4": {
             "spyr0s\\tabcollapse\\": ""
