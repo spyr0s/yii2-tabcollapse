@@ -1,0 +1,35 @@
+{
+    // package name
+    "name": "spyr0s/yii2-tabcollapse",
+
+    // package type
+    "type": "yii2-extension",
+
+    "description": "Tab collapse extension for the yii2 framework",
+    "keywords": ["yii2", "tabcollapse", "extension", "bootstrap"],
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/spyr0s/yii2-tabcollapse/issues",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "https://github.com/spyr0s/yii2-tabcollapse/wiki/",
+        "source": "https://github.com/spyr0s/yii2-tabcollapse"
+    },
+    "authors": [
+        {
+            "name": "Spyros Soldatos",
+            "email": "lordovol@gmail.com"
+        }
+    ],
+
+    // package dependencies
+    "require": {
+        "yiisoft/yii2": "*",
+    },
+
+    // class autoloading specs
+    "autoload": {
+        "psr-4": {
+            "spyr0s\\tabcollapse\\": ""
+        }
+    }
+}
