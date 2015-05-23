@@ -11,6 +11,7 @@ namespace spyr0s\tabcollapse;
 
 use yii\base\Behavior;
 use yii\helpers\Json;
+use yii\web\View;
 
 class CollapseBehavior extends Behavior
 {
