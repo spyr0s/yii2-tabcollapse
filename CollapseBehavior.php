@@ -23,14 +23,14 @@ class CollapseBehavior extends Behavior
         $id = $this->owner->options['id'];
         $options = Json::encode($this->owner->clientOptions);
         $js = '$("#' . $id . '").tabCollapse(' . $options . ')';
-        $view->registerJs($js);
+        $view->registerJs($js,View::POS_END);
 
         if (!empty($this->owner->tabCollapseEvents)) {
             $js = [];
             foreach ($this->owner->tabCollapseEvents as $event => $function) {
                 $js[] = '$("#' . $id . '").on("' . $event . '", ' . $function . ');';
             }
-            $view->registerJs(implode("\n", $js));
+            $view->registerJs(implode("\n", $js),View::POS_END);
         }
     }
 } 
