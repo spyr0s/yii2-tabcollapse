@@ -10,7 +10,8 @@ class TabCollapseX extends TabsX{
 
     public $tabCollapseOptions = [];
     public $tabCollapseEvents = [];
-
+    public $hashVarLoadPosition = View::POS_HEAD;
+    
     public function run(){
         parent::run();
         $this->registerClientScipt();
