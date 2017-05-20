@@ -5,6 +5,7 @@ namespace spyr0s\tabcollapse;
 
 use kartik\tabs\TabsX;
 use yii\helpers\Json;
+use yii\web\View;
 
 class TabCollapseX extends TabsX{
 
