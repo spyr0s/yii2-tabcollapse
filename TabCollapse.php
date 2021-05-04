@@ -9,6 +9,7 @@ class TabCollapse extends Tabs{
 
     public $tabCollapseOptions = [];
     public $tabCollapseEvents = [];
+    public $clientOptions = [];
 
     public function run(){
         parent::run();
